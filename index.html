@@ -1,208 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>waiting's profile</title>
-  <style type="text/css">
-body{background:#f3eade;padding-bottom:100px;}
-.myphoto{
-  width:25vw;
-  height:25vw;
-  border-radius:25vw;
-  overflow:hidden;
-  margin:0 auto;
-}
-.myphoto img{width:100%;}
-.center{text-align:center;}
-.box{background:#fff;padding:1em;border-radius:1em;margin:0.5em;}
-  </style>
-</head>
-<body>
-  <div class="center" style="margin-top:100px;">
-  <div class="myphoto"><img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.6435-9/32564427_10156287787778618_4447551128791416832_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=174925&_nc_ohc=RgXSW675_FIAX_RLQfD&_nc_ht=scontent.ftpe7-3.fna&oh=00_AT_oRbXt2o-DZH5D9JjlI3i3Ypglzz9g1y_ACd5idOwqVA&oe=62136B4D" /></div>
-  <br />HI, I'm waiting.<br/>你好，我是偉婷
-  <div style="max-width:400px;margin:0 auto;text-align:left;padding:0 1em;">
-  <br/><br/>最高學歷是成功大學中國文學系。<br/>踏出社會的第一份工作在誠品書店做設計，排版雜誌也服務北區書店的各種平面或櫥窗設計需求。離職之後，在時尚雜誌社服務各種客戶的編輯需要，製作過臺灣高鐵車上刊物TLife、台北101會員雜誌、賓士會員雜誌等。也曾經在台北藝術大學擔任助理，完成各種活動的企劃與執行。<br/><br/>婚後前七年在家帶孩子並自由接案，爲出版社、大學、工業零件公司、網站製作公司，提供各種文字、視覺設計與前端程式撰寫的服務。也成立數位出版工作室，服務電子書出版的編輯、設計與製作。<br/><br/>
-  如今職稱是親子天下視覺設計。業務內容包含數位專輯設計、前端程式編寫、童書、雜誌等各種印刷品的設計編排，當然也包含各種形式的行銷文宣製作。<br/><br/>方便你們更認識我，以下是臉書朋友們對我的評價：
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HI, I'm waiting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style type="text/css">
+        /* *{border: 1px solid #000;} */
+        body{background:#f3eade;padding-bottom:100px;}
+        a{text-decoration: none;}
+        .myphoto{
+          width:35vw;height:35vw;max-width: 200px;max-height: 200px;
+          border-radius:25vw;overflow:hidden;margin:0 auto;
+        }
+        .myphoto img{width:100%;height: 100%;}
+        .center{text-align:center;}
+        .facsbookFriends .box{background:#fff;padding:1em;border-radius:1em;margin:0.5em;}
+        .toolBox{width: 100%;margin: 0 auto;}
+        .toolBox h2,.tag h2{margin: 3em 0 2em;}
+        .toolBox h2 span,.tag h2 span{background: #fff;border-radius: 40px;padding: 10px 20px;}
+        .toolBoxInner{width:100%;max-width:600px;margin: 0 auto;}
+        .toolBoxInner img{width: 90px;margin: 10px;border-radius: 30px;}
+        .tag{width: 100%;max-width: 800px;margin: 0 auto;}
+        .tag h2 span{cursor: pointer;margin: 10px;}
+        .tag h2 span:hover{background: #394032;color:#f3eade;}
+        .web .box{width: auto;max-width: 400px;background:#fff;border-radius: 10px;overflow: hidden;margin: 10px;}
+        .web .box .pic{overflow: hidden;line-height: 0px;}
+        .web .box .btn{background: #FC7753; color: #fff;font-size: 1.2em;margin: 10px 10px 30px;border-radius: 40px;padding: 10px 20px;text-align: center;animation-name: lookHere;animation-duration: 2s;animation-iteration-count:infinite;}
+        .web .box img,.illustrator .box img{width: 100%;max-width: 400px;}
+        .web .box p{padding: 10px 20px;color: #000;}
+        .illustrator img{margin: 10px;}
+
+        .flex1{display: flex;justify-content: center;flex-wrap: wrap;align-items: center;}
+        .flex2{display: flex;justify-content: center;flex-wrap: wrap;align-items: top;}
+        @keyframes lookHere{
+            0% {box-shadow: 0px 0px 10px rgba(196,150,90,0);}
+            50% {box-shadow: 0px 0px 15px rgba(196,150,90,0.5);}
+            100% {box-shadow: 0px 0px 10px rgba(196,150,90,0);}
+        }
+
+
+        @media screen and (max-width:600px) {
+            .tag h2 span{animation-name: lookHere;animation-duration: 2s;animation-iteration-count:infinite;}   
+            
+        }
+          </style>
+        </head>
+    <body>
+    <div class="center" style="margin-top:100px;">
+          <div class="myphoto"><img src="https://lh3.googleusercontent.com/WGOctxE1gb-Qg0hH42UJWGly49F6we6xProJVrv9uVm9EvEYH2smLTdAGJOiZIbuJkXcVPB5rpE1B5OWxZZogJdF8_Nt3xXAVmgB-SebYuTRqxWP22BYOd2w42H_Ax_wlL0X_Freq6JgDryV1oqAolco_tzIAhxMy_UA-uqmdz1DzvdQwfedSG91RxR9papWR1vVeVNQ33DKivVutmNOkBxb1Dh_1hVOqk8ApTIRutdp9ehdIWkelTcc4hlGNsv07OrC2-tdYvpm7enZ5yAuIu3fyUdxWMJ7ISMYkJuKqiWBercTuvrm3dLqXoqxWlOr4z1oU8NPhOaDklr8ji8Yzl4YjYxRud-7ibDhVthLVX23r_MieoXFy5CY8MEnzQaIxeCSApsPCesIFSg-xF__xu314m9Hb8QQyOH5cTSHfhHDJqB5dW0rwDg4hOYtoOo8Q3JFTyAff3AaODAXN9fnmmpcFsJ5_LMSQ_J4iPT5yU15QYZ4XgPjDZIkSjxRhAPkGVuQhsifwCUyzGCtwl88TNotVd2tx4i8juamlXiskKUHSOrTY_Q4eLHyxxz6N25H7kLW0_5yKKdaYvVBBB0vk1FFzih_Kd-r0aEVEcQ-gYj8EHT9uCq1GUstxjkrQUNO6SwKiN7ojQ2CBJWiRchP8KVETgNABxHe7wA8HNx6gLpNwBP8CeaxCYVDtxWEyR7aN6zxzVc8KXE6oEqtGAOmgeLyeTXFXJ87XVKvqbNlqgJudVkc5NnsGaOV7bU=w1108-h1076-no?authuser=0" /></div>
+          <br />HI, I'm waiting.<br/>你好，我是偉婷
+          <div style="max-width:400px;margin:0 auto;text-align:left;padding:0 1em;">
+          <br/><br/>最高學歷是成功大學中國文學系。<br/>踏出社會的第一份工作在誠品書店做設計，排版雜誌也服務北區書店的各種平面或櫥窗設計需求。離職之後，在時尚雜誌社服務各種客戶的編輯需要，製作過臺灣高鐵車上刊物TLife、台北101會員雜誌、賓士會員雜誌等。也曾經在台北藝術大學擔任助理，完成各種活動的企劃與執行。<br/><br/>婚後前七年在家帶孩子並自由接案，爲出版社、大學、工業零件公司、網站製作公司，提供各種文字、視覺設計與前端程式撰寫的服務。也成立數位出版工作室，服務電子書出版的編輯、設計與製作。<br/><br/>
+          2019年返回職場，任職親子天下視覺設計，業務內容包含數位專輯設計、前端程式編寫、童書、雜誌等各種印刷品的設計編排，當然也包含各種形式的行銷文宣製作。2022年1月起調任至親子天下數位研發中心，擔任互動設計師，專職負責公司議題型數位專輯、大型活動與電商策展等數位內容設計與製作。
+            </div>
+        <div class="toolBox">
+            <h2 class="flex1"><span>我的工具箱</span></h2>
+            <div class="toolBoxInner flex1">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/1024px-Adobe_InDesign_CC_icon.svg.png"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1920px-Adobe_Illustrator_CC_icon.svg.png"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1920px-Adobe_Photoshop_CC_icon.svg.png"/>
+                <img src="https://play-lh.googleusercontent.com/efwNlvQ3pch_-hZ9xeHf6YF-f_rHzQQo21IVevPLOxpzSVfxuVKom2_7C6axFbC-3rU"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/128px-Visual_Studio_Code_1.35_icon.svg.png" style="padding:15px;width: 60px;background: #fff;"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" style="padding:10px;width: 70px;background: #fff;"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" style="padding:9px 20px;width: 50px;background: #fff;"/>
+                <img src="https://www.jquery123.com/assets/images/jquery-logo-md.png"/>
+                <img src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png" style="padding:15px;width: 60px;background: #fff;"/>
+            </div>
+        </div>
+   </div>
+   <div class="tag">
+       <h2 class="flex1"><span id="btnA">網頁設計</span><span id="btnB">插畫</span><span id="btnC">臉友評價</span><span id="btnZ">聯繫方式</span></h2>
+   </div>
+   <div class="contect">
+    <div style="margin-top:50px;text-align: center;color: #000;">
+        <p>mail: waitingrain@gmail.com</p>
+        <p>facebook: <a href="https://www.facebook.com/waitingTwT/" target="_blank" style="color:rgba(196,150,90,1);;">https://www.facebookcom/waitingTwT/</a></p>
+    </div></div>
+   <div class="web">
+        <div class="flex2" style="margin-top:50px;">
+            <a href="https://feature.parenting.com.tw/109fakenews/" target="_blank">
+            <div class="box">
+                <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLXjx8SUCHfaFKfPdQ_e6mqo5XC4xXXTg1pSPOacatQBPQ0Z_yTtzMe7KTZ7ZYAHxeoraqIcc9u4moHomhfTjswBloiqolHCcdK3P-0FWUVxCm6IZCvcmW6P-tHjVuX9M2DshO205QhnCuJkFpbL5RNh=w2002-h1226-no?authuser=0"/></div>
+                <p>依據親子天下no.109封面故事，延伸成為網頁版的設計，將「六步驟辨識假新聞」的內容製作成互動對話框，「假訊息受騙指數」製作成互動的翻頁卡。</p>
+                <div class="btn">實際體驗 ></div>
+            </div>
+            </a>
+            <a href="https://feature.parenting.com.tw/115youtuber/" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLV33CiRHLrWnG2ZBcPBxc_PlQRaHo2uwHacvMPVrwzv7dtMaALF-aadFsZUIO8-lDAXAJw_-y1rQoRdDOBgmhFOLCqSi1VSa3tFqMoas3JefI7XzIEw-UXc9FeEXLUeIwDK2r7754h3qUlpdjsDP51S=w2002-h1224-no?authuser=0"/></div>
+                    <p>依據親子天下no.115封面故事，延伸成為網頁版的設計，將「接招！網紅快問快答」製作成角色型的互動提問，更多延伸文章和QA也都設計成不同的互動方式，但閱讀體驗多元化。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://topic.parenting.com.tw/event/club_laima2020/" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLVfkXxET0wJAKw3Tz_nh79BUI8JfbqF_r4n4QE_nmBcpP63AihEX24LLwc3WWXf_2MxcTTXqC3N3L_31YtLMMKXoZowyDY8G_STTNcikAnMpIyUe0xyYQNochDplbzQV5dTkjpXlWk2-rGI_NLBc9sj=w2002-h1226-no?authuser=0"/></div>
+                    <p>延伸繪本《我變成一隻噴火龍了》，進行特展活動的網頁設計。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://topic.parenting.com.tw/event/2019/108-literacy/" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLVR3jNw6hZddqAVvTuh0jhrd8227zSF6EtEXojmI4TOJCFg6_EVO5zRZQ8NIvHZ--yLKjjKyp3C-sCUnrPaO3mmLVq1QRTqfO8QYAVxD3AOjhq5IgJmcwcm1Oq1hMJyCLVjBe032kB3TCo3ckqksPBq=w2002-h1228-no?authuser=0"/></div>
+                    <p>使用鮮明的不規則色塊設計，豐富呈現不同商品的導引。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://feature.parenting.com.tw/116booktrip/" target="_blank">
+                    <div class="box">
+                        <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLV0jXa11aRTUS1rb8sOKB4eTa_y7lc94t0jnz93T5G_4SayUOxRWZn2hvKevOTbsR-PeO_WPqe2pGAra4SaHyCH9Hxd9R5us1aMuHphKbv9HIGJuLHSfZQmpHnXP7xJRXaCDNMf4WVKS08rS3zp9F4P=w2002-h1238-no?authuser=0"/></div>
+                        <p>依據親子天下no.116封面故事，延伸成為網頁版的設計，包含利用互動式地圖呈現「找找看，全台學玩路線在哪裡？」，利用不規則區塊輪播呈現「精選景點介紹」，除視覺上更貼近雜誌閱讀，也利用點擊遮罩容納更多訊息。</p>
+                        <div class="btn">實際體驗 ></div>
+                    </div>
+                    </a>
+            <a href="https://site.parenting.com.tw/topic/SupplyTeachers-354" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLX5r4OGWHDmS26H8xIh4mk1B21ncJOadFTtIqAP1TiuakRgXJFJUgkuu1XUYLxwC0mdLamvORSOWFcWl1uuL0M49FIukgSBtxMb5N4HGWI5sdsCViLMifRYZ27f--py8Skqy_sqAprBoESrm1KSzmry=w2002-h1258-no?authuser=0"/></div>
+                    <p>2021年，公司開始引入「發燒網」工具製作網站。在模組化的工具和設計限制當中，依舊努力做出可以讓人耳目一新並留下印象的網頁設計。其中以互動式地圖的方式可以一覽110學年全台正式教師開缺名額。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://site.parenting.com.tw/topic/IllegalKindergarten-462" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLXko92HC7katz5VvzcbhYoYSQQl7y-XwkCi3aNj9aoggGrD-2KbXp3ourDI-zlatMkjPu_ZQlSd4LT3v4z4WqzTdS9Z1F_nf7wmG4MJ0aqKW0_v6MPoeqDgLeAipCzhmvt-w6j0O1lCu0MWJDCHTTkB=w2002-h1242-no?authuser=0"/></div>
+                    <p>因為企劃製作經費有限，除了設計製作網頁，更進一步協助插畫繪製。其中「別當下一個受騙家長」以互動點擊方式，快速體驗違規的線索。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://site.parenting.com.tw/topic/nurserysubsidy-388" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLWNx5c1JWowl5DrnFY-r0udDIKFZeGTa-gQCo5e67Yx7zMFMreyAsGWDddnCKgcPFHwNTwvCCvEJudKTv3Zs9OiuJp43nCpN3IS8M2kTwR1OwTDp2NRVcFeYDekgl8GFPqmDOE2yjA8qHMudb9vOie5=w2002-h1238-no?authuser=0"/></div>
+                    <p>將既有的插畫素材再利用，透過包裝色系的調整，達成舊瓶裝新酒翻新了這個常態型的企劃，其中「22縣市育兒加碼補助」利用google sheets作為資料庫，同步網頁內容呈現，方便記者隨時更新資料。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://site.parenting.com.tw/topic/ALessonFromFailure-644" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLXgukL6Qk47n84A2dVnhb1BFMlwP3OoVx4FXSTQj6wpesP7OiWMTx8pP7xjybI7Ajx0sEi9siEKDvv-DQfhzD_ariEoirCtEbACAxHnd3R-T_TQPeUyBvJeI6OwhSLDsdNEkdMxixH8HhjNi1QqPaz6=w2002-h1242-no?authuser=0"/></div>
+                    <p>2022年轉任數位研發中心之後，將設計模組化，並製作教學ppt，提供各單位可以輕鬆再利用，協助公司快速生產各種網頁需求。名人篇和老師篇利用色系安排，即為活化模組使用之範例。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://site.parenting.com.tw/topic/KnowingKidsWithSpecialNeeds-668" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLV_hSvUMqEowZF1IOfD-sfz9SV1Tueb9zMdsMKIGoKfNqDBIZwz6J60i9DyOdscjhudMNfES_IXNqyvDi8bcCI0pTZ-SSuaJOHz-bTq3KEyG50kejjNkYlpWrkxDl_bl4ixkl9_SGJ2wc6NsDzwDu90=w2002-h1238-no?authuser=0"/></div>
+                    <p>依據親子天下no.122封面故事，延伸成為網頁版的設計，利用簡單的滑鼠互動活化雜誌封面視覺的體驗。透過模組化設計，快速生產網站。並持續開發可再利用的文章模組。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            <a href="https://site.parenting.com.tw/littlestar" target="_blank">
+                <div class="box">
+                    <div class="pic"><img src="https://lh3.googleusercontent.com/pw/AM-JKLV6Fz43zJFjO3qj1zbhAvYLNEJKW1e1EpIt98Sf1nGwB2UyUI0O4EkumnhG6q9ppEp4LHmbo7U219macMXll4gQYAMfDGfz2xIMo0GHozQMhA7E30l0FdNN3OUAF8gWEURax4S1h2m_R5_53SiIQoJk=w2002-h1240-no?authuser=0"/></div>
+                    <p>小行星品牌網站改版，利用大面積色塊和醒目logo取代重複的角色圖像，並開始開發新的選單列模組，提供公司網頁設計更多樣化的選擇。</p>
+                    <div class="btn">實際體驗 ></div>
+                </div>
+                </a>
+            
+        </div>
+   </div>
+   <div class="illustrator">
+    <div class="flex2" style="margin-top:50px;">
+        <div><img src="https://picture-original.fevercdn.com/page-parenting-2021922-f133e5bb-3934-40dc-a72b-7fd606d76074.png" style="width:100%;max-width:400px;height: auto;"/></div>
+        <div><img src="https://picture-original.fevercdn.com/page-parenting-2021922-7bbf5b31-e9fc-4ca3-b860-9364b94016b4.png" style="width:100%;max-width:400px;"/></div>
+        <div><img src="https://picture-original.fevercdn.com/page-parenting-2021923-3267cea5-dda8-44eb-8fb8-0c568230bad0.png" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://picture-original.fevercdn.com/page-parenting-2021923-46c32244-0d66-49b4-bb9c-4238e1f3e791.png" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://picture-original.fevercdn.com/page-parenting-2021923-a4eb598e-a288-45ea-9039-4d6c56c0d9df.png" style="width:100%;max-width:200px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hevLV4kRexwcH5Ly3UQlwir_ruLiXXqxz6yOaU6DTxupEbkMztg-pC3egwEEswiPQKuqJZvKSVghiuNbRKhDSYkS0D3PMqii1meq0rpTBLonFwgBORrZ58IFV-_RljFlg52FDNEkH8R_biaRLvg_=s1200-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLXKX6tIuroCtMTEV_qldQQuhhJ6mv_mYrtKugk0iJwfDVC4p9rvscWLKjB_BOYVtLkDKu8hVA6Z5ouGoyUAcnksDnMb3-4_4nefLIVa14bDfYcCTzTdLVgXZeMZY2qKYXLQUbK8_lunmKUDKeTnInee=s1200-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLWsowHqRO0dvWpVuRWMP1KC80Fj4lHNgHX4pH_B77-v4uFvdCsDWjaXPmgZ44GM8KfAYPgq-Fn47MfCtsJomJRh8gf8eCUvJjkKmK2Ua0J6OJSnyHNjf-6bmRrMYG34BDeh_cNuqvClXM0gsFj8v78p=s1200-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLX__GkIGb8XVLO9MNvcPCI1_V18nlBinMQuzwUqosDYmTCvVCAEaWgiCoFIc5_m6jin5qCzYITWCyIQSZVGqQR8EpHPR4Ng4NkdTYOCrzfyk1wYOcjd2YvC8rWHXgG-ZEEu7UahyYsnHUAV4FfAERiU=s1200-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLVpoujpXjU6BRiYten45PGnIPCi8naImbgJ8Bhhm6ChFrxFGCiNWugmxfbjJYerBtP_vkvaxiHtMrvavLS9xoiDV8dsBoPp2ZBDyEmzB0lkyIOO_8vJzx9vXNUytEwYXh4mAoHkvGoqN1LJLnFzidti=s1568-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLW_DRlHCJT-Sbxuxzr0PahpAq17yD4gXa1d4YQAqeVQRSieZnQT7XIHEp3N-dgaHTnMoVvw3ypNoGn7HNyQBkv_esJFBmwooyMcNSaGwTfj3yKvoD6Q4Yn5LS2_cZGNtgXG26eeBrUUV7wJk01rePhG=s1568-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLVQtzlcCeDZXKgJlj8yF1d30nfhgi-vOLJZOmxXsg-wy2T9H1REIZXd2Z11nCGMhMJRNypgsj1VjFGGtSi0WZ7OIaOhTOEREFHSp3ety3Mpwy9R6tLzYf9jlBCkK2buyaVpdBKAZResORy0DUB39_hl=s1568-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://picture-original.fevercdn.com/page-parenting-2022421-029f492c-1e53-436a-8f3d-2588cbdb6fca.gif" style="width:100%;max-width:500px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLWHqrROdtRnhYnEkbN4ZQjqDEwcNM-8BHsoDC1poTclbZJhW_e96m4OC-6192VYjaiAl-wdb9m543FGovhDYsvtEpz1cgTzT2mIAYlQ8mUUnuauD4NMz7eOPB2a5ljQ5-ty9Du7EMCp2Umbb7DxBBc7=w1051-h1278-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLU7311NFSPGJzOchqqX3kIpmqeRud8PMsd6ePfVvsroNuSmRyQbYWMmqakN8BBDOzA2VjrB96EnXqm9YljdXTrzkko3RGL7itJbVVtXF7bVRhSJYzqrIe0jAbfyCM2zE9RANL6sjG19VULcN7dzMoBC=w1700-h1568-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLXcnrgaS18d40BY5UmgFRqBRnNbaZKHviWc9A4cZdGn7APKpyhqEW1CgZCv-zMWDPLJgnZIDrRKDEx7uTZx8z-AgH2oJIWzOHK14xHEMqOgyDOhNfhHxDWpXz4I5dcJNrq4cwL9gg7nDryy3lvHQKRe=w1768-h1568-no?authuser=0" style="width:100%;max-width:300px;"/></div>
+       <div><img src="https://lh3.googleusercontent.com/pw/AM-JKLVDycZeICxylyr28JqrVdByVu32xhkoExlRlIBpKUFnJ3d1N0T8j2u2NHRrXb2dx472dfRxSje3kkCbBRvmVINeSDAbsFUJ0GYaJk8Zh57BF0zxhY09sJfHOPDKARZttuEcVNSZyQ2mKJubxJ7b8LJP=w1270-h1568-no?authuser=0" style="width:100%;max-width:300px;"/></div>
     </div>
-</div>
-<div style="width:80%;margin:0 auto;">
-<div style="margin-top:50px;">
-<div class="box"><b>陳海蒂</b><br/>
-我最讚嘆你的行動力，覺得這點最厲害!
-</div>
-<div class="box"><b>曾怡智</b><br/>
-學習態度……我有千分之一就好了~
-</div>
-  <div class="box"><b>Ling Ling Yu
-</b><br/>
-你超厲害呀，有你在我就是全然交托，無論是工作或生活，都很慶幸自己遇見你😊
-</div>
-  <div class="box"><b>Xiu Min</b><br/>
-妳超級厲害，從中文系變成美術編輯，自己學會很多軟體，還會做電子書
-</div>
-  <div class="box"><b>Tan Wade</b><br/>
-很棒的自學企圖心，以及很好的執行力
-</div>
-   <div class="box"><b>Sophia Chuang</b><br/>
-有任何需要的就先問偉婷會不會，通常都可以得到完美解答超棒！
-</div>
-  <div class="box"><b>陳雅萍</b><br/>
-我真心覺得妳厲害，自學程式、自學電子書、還自學了自彈自唱！連幾年前去環島你還在車上閱讀、工作，你應該是我朋友之中，最勤奮認真、努力生活的人了！更厲害的是，兩個孩子在妳潛移默化中，也是熱愛學習的孩子！而且最厲害的是，在最困難的時候，妳都沒有放棄。
-</div>
-  <div class="box"><b>Phoebe Yang</b><br/>
-妳是知識型媽咪，超用心安排孩子的興趣與學習，而且標準自主學習的代表啊！！！
-</div>
-  <div class="box"><b>Hinanoko Lei</b><br/>
-你願意把娛樂的費用優先用於學習，這一點認真孜孜不倦，很好學！
-</div>
-    <div class="box"><b>Vivienne Wang
-</b><br/>
-「主動」優化流程女王（主動很重要，也是關鍵）、分析控（這個是稱讚）、結論總是能導向正面的王者
-</div>
-    <div class="box"><b>林祉勤</b><br/>
-你對文字圖像的咀嚼與表達能力還有超強行動力讓我很佩服!
-</div>
-    <div class="box"><b>Yu-chun Chien</b><br/>
-偉婷是最深刻的讀者，也是最貼心的編輯；是文字工作者更是圖像魔術師，更是生活藝術家。<br/><br/>
-沒有看過可以當數學老師的中文系學徒，也沒有看過一腳跨進程式設計領域，在編碼抓錯的符號海洋裡快樂遨遊，而且還能競圖接案的文科生。<br/><br/>
-不諳煮食與生活瑣事的台北小妞在日常的磨練下成了能煮上一桌豐盛而且精打細算的二孩之母，把育兒生活的每一步踏實且豐盛的活出自己的風格（就是好學、好問、好好玩的曾偉婷style)然後每個月每年還用excel做家庭收支規劃報告，帶著老公小孩往更好的方向前進。<br/><br/>
-最最重要的是，曾小姐走過低谷後仍能保持內心的希望和不滅的學習火光，把自己活成一盞燈，在每個朋友需要扶助的時候，點起對方的希望。
-</div>
-    <div class="box"><b>溫雅淳</b><br/>
-你的堅持很厲害，遇到瓶頸也會想盡辦法跨過去！就像沒有任何事可以阻止你去做想做的事！<br/>
-做事腳踏實地一切靠實力，認真精進自己的能力以達到更好的成果！
-想到美編就會想到你，覺得各種軟體都難不倒你😀<br/>想誇獎你的真的太多❤ 讓人願意付出真心也是喔～因為你也總是親切真心待人😀
-</div>
-    <div class="box"><b>陳亭亘</b><br/>
-我很佩服妳的工作跟家庭兩方一起努力的毅力跟能力，WFH早早就已經在實踐的超能力，以及能坦然地把這些寫出來跟大家分享的誠懇，我非常佩服。
-</div>
-    <div class="box"><b>紀灃酌</b><br/>
-妳超級厲害，學什麽就會什麽，真正厲害（以下省略技術範疇兩萬里）
-</div>
-    <div class="box"><b>Dora Chen</b><br/>
-從國中就優秀到現在啊！<br/>
-一如往常般厲害 👍<br/>
-自學程式真的太強大了！<br/>
-資管系先跪了<br/>
-</div>
-    <div class="box"><b>廖乙蓉</b><br/>
-Dora Chen 資管系+1跪妳旁邊<br/>
-Weiting Tseng妳真的很棒👍🏻國中看妳都笑咪咪的，成績一直都很穩定的在前面，沒想到這只是開始，現在更是優秀👍🏻👍🏻
-</div>
-   <div class="box"><b>Ho-Chun Lin</b><br/>
-這是weiting惠我良多的厲害，我學生們心目中的專業美編媽媽，每次交成果出去都讓我很有面子，學生也誇獎。<br/>
-明年我規劃著作，也要拜託weiting了(先交出膝蓋跪著
-</div>
-   <div class="box"><b>黃柏軒</b><br/>
-你根本是人類yamaha
-</div>
-   <div class="box"><b>劉橞筑</b><br/>
-勤奮是你的核心，捲起袖子是你的起手式，執行力是天生標配，加在一起就沒有你做不到的事。
-</div>
-   <div class="box"><b>洪欣怡</b><br/>
-有想法的人，當決定了目標就一步步實踐。喜歡學習的人，讓自己不斷的吸收新知。是個溫暖的人，帶給身邊的人很多美好。
-</div>
-   <div class="box"><b>謝佳桃</b><br/>
-妳超厲害的<br/>
-文筆很厲害<br/>
-育兒很厲害<br/>
-教育很厲害<br/>
-學什麼像什麼<br/>
-真的好厲害喔⋯⋯
-</div>
-   <div class="box"><b>Irene Chou</b><br/>
-我覺得你的自學能力非常強！
-</div>
-   <div class="box"><b>Could You</b><br/>
-除了什麼能力很厲害之外，我覺得樂於分享這點很珍貴
-</div>
-   <div class="box"><b>黃育蓮</b><br/>
-你超強好嘛！關於設計、程式的問題，只要跟妳討教，就會有新的解方！
-</div>
-  <div class="box"><b>Peiyin Lin</b><br/>
-你超厲害不用懷疑！
-</div>
-  <div class="box"><b>Chang I-chin</b><br/>
-你很強啊！想想生育津貼的專輯，外縣市資料是誰做的！有沒有覺得自己很厲害！
-</div>
-  <div class="box"><b>Shu-Hui Hsu</b><br/>
-我們認識時候的，角色關係我覺得你很像妹妹，我很喜歡你很認真的感覺，很多難事你都笑笑的（可愛的酒窩）這是我覺得你很棒(厲害）的地方！❤️
-</div>
-  <div class="box"><b>Tracy Wu</b><br/>
-你超級厲害，有強大的學習力與行動力！
-</div>
-   <div class="box"><b>蔡佩真</b><br/>
-偉婷真的很厲害，喜歡你的內在堅韌而柔軟、對小孩的包容深愛也令我折服，還有充滿藝術細胞能DIY小孩各種教具望塵莫及🤣，又能在親子教育領域發揮專長無人能及，有很多優點集於一身❤️
-</div>
-   <div class="box"><b>Yuan Yen</b><br/>
-設計很厲害，學習能力很強，還有行動力極高!!!💪<br/>
-     以前帶社課，教編輯和排版軟體等等很有主題也很有系統性，想當年的InDesign我也是從零跟著你學才上手😎
-</div>
-   <div class="box"><b>Kuo Pourquoi</b><br/>
-教編輯和排版軟體等等超級實用！確實可以廣泛運用到很多地方， 一直到現在有時候看雜誌或平面設計的東西，都還會注意一些小地方，哈哈。 / 我想讚美偉婷，是個很有想法、很有執行力的人，我常常想起你分享到誠品求職的過程，也喜歡你分享許多生活、教養、工作經驗，到現在我還常常跟認識的人說：我有個中文系學姊很厲害，讀書的時候自己到書店翻書，回家後不斷認真練習，然後很久之後她真的成為一位美編了，就算中途在家育嬰了一小段時間，也很努力回到職場，現在在知名出版社工作(跟著驕傲)！
-</div>
-   <div class="box"><b>Mandy Wu</b><br/>
-你是全才，面面俱到
-</div>
-   <div class="box"><b>Selena Tsai</b><br/>
-我覺得偉婷最厲害的是有一顆永遠願意面對挑戰的心！<br/>
-無論遇到的難題是什麼，是生活或是小孩還是不擅長的事物，都可以慢慢的把它破關。
-</div>
-   <div class="box"><b>Gin Hsu</b><br/>
-你超厲害~記得討論maker的發想，妳提的每個想法點子都可行又趣味；設計上因為妳的巧手常出現驚喜作品；然後妳還不斷學習，不斷進步成長~這樣我們大家怎麼活（硬要把大家都拉下水）
-</div>
-  <div class="box"><b>Alice Mai</b><br/>
-親愛的妳在我心中是堅強又溫柔的，想做的事情都能堅持到底，想愛的人都如此滿心對待，喜歡和妳聊天，因為充滿能量與愛心💗
-</div>
-  <div class="box"><b>Wety Huang</b><br/>
-覺得你很厲害，做事很果決，且很有毅力。高中時毅然決然的換類組，並且持續從事相關工作。
-</div>
-  <div class="box"><b>Claire Chen</b><br/>
-你很厲害，從一開始認識你，就能拿著電腦看版，一邊看一邊改，到現在問你電腦大小事可以得到答案，內心有創傷時你也能給我被接住與認同的感受，居家上班時，能和我分享食物們，有你在身邊很幸福，超棒的。
-</div>
-  <div class="box"><b>Yun Kuan</b><br/>
-埋頭苦幹是大學認識的妳，堅持的背後充滿著探究學習的勇氣與毅力，即便生活裡遇到難題，妳都帶著愛與包容往前克服。水到渠成的妳，找到自信光彩後，將熱力散發出去，很美！曖曖內含光的妳，是我們一輩子可以請益的第一人選！
-</div>
-    <div class="box"><b>Chinty Huang</b><br/>
-在該吹毛求疵的地方不放過自己很厲害，所以能力、能量一直擴充；在逼死自己的地方很厲害，所以常常看妳鬼吼鬼叫又死去活來；滿血復活的能力很厲害，有些八百年前聽過覺得我絕對無法接受的事情妳都還是活著走到現在了；在讓小孩自己閱讀這塊很厲害，我姪子姪女到現在都只有寶可夢跟YouTube跟mono親子台…怎樣都好像有點難好好坐著看完一本稍微有點知識性的書📖⋯⋯
-</div>
-    <div class="box"><b>WU Chiujung</b><br/>
-我是個萍水相逢的網友，但我覺得妳是個很會實現「文字的力量」的人，我認為妳有用中文感動人心的能力，我想妳應該很會教人「如何說自己的故事」❤️
-</div>
-    <div class="box"><b>陳怡靜</b><br/>
-自從你把教師衣服換顏色後，我看到你都會起立敬禮。<br/>
-記得當時你說，看到別人會，自己不會就會想學會，我覺得這種精神太令人佩服了，你超厲害呀！
-</div>
-  <div class="box"><b>Shell Huang</b><br/>
-首先「厲害」這兩個字，我覺得不能恰如其分的形容妳。我見過很多厲害的人，有些是能力超群，有些是手腕高明，有些是外型出眾，有些是態度敬業，然而妳的厲害，來自於妳勤能補拙的毅力、上窮碧落下黃泉學習的動力、一絲不苟的正直、以及妳數十年如一日對人對己的真誠。妳很少計較自己付出多少，也很少計較付出能回收多少；在無數次為了助人卻害慘了自己的慘痛教訓中，終於長出了一點能拒絕與捍衛自己權益的能力；你從不吝惜分享與給予，在專業領域上有難以妥協的對完美的執著，把工作跟任務交給妳可以高枕無憂，因為妳可以舉一反三順便斜槓把週邊都一起做完。<br/>
-我見過很多厲害的人，但如此厲害、無私又真誠的妳，真的是非常非常難得。
-</div>
-  <div class="box"><b>Dai Nung</b><br/>
-我印象中的你，對於突發狀況的應變能力很好，而且很獨立，最重要的是，就算遇到不那麼如意的事情，你都能以正能量的方式去處理與面對😊
-</div>
-  <div class="box"><b>Candice Lin</b><br/>
-萬能的設計，體貼的設計，對自己永保挑戰之心的厲害朋友
-</div>
-  <div class="box"><b>林胤斈</b><br/>
-偉婷超級厲害～～不僅是超級快手（快到讓我反應不過來），超多技能竟然自學就能解鎖🔓令人崇拜🤩
-</div>
-  <div class="box"><b>Evelyn Chung</b><br/>
-一切盡在不言中，［厲害］這個詞已經無法形容妳了～ 你說第二沒人敢說第一～哈哈哈٩(˃̶͈̀௰˂̶͈́)و
-</div>
-  <div class="box"><b>No New Ya</b><br/>
-我覺得我第一時間不會想到「厲害」這個詞，但是一種「很讓我能說出來得意驕傲」的朋友！為了自己喜歡的目標就開始啟程耕耘撒種，即使中間繞著順道完成其他目標，但其實一直努力堅定地走，然後轉瞬間發現已成可靠大樹的類型。為了關係做了許多付出，但也從鞭策自己到最後「蛻變」成蝴蝶找到讓自己較舒服的位置。雖然生命還有很長的下半段，但相信依舊平凡而精彩！溫暖且有愛！智慧迷人兼具的女人！
-</div>
-  <div class="box"><b>Ya-ting Tsai</b><br/>
-你溫柔又堅強，我期許自己也能像你一樣去解決總總的問題
-</div>
-  <div class="box"><b>Doris Jeng</b><br/>
-覺得妳很厲害！從我認識妳正開始要離開台南到台北，舉家遷往移的過程，是用了許多智慧醞釀的決定！<br/>
-到現在仍然保持滾動不遲疑的心！謝謝妳讓我看見正向積極爭取，也切實履行對自己的承諾，妳很棒！
-</div>
-</div>
-  <br/>
-  <br/>
+    </div>
+   <div class="facsbookFriends" style="width:80%;margin:0 auto;">
+        <div style="margin-top:50px;">
+        <div class="box"><b>陳海蒂</b><br/>
+        我最讚嘆你的行動力，覺得這點最厲害!
+        </div>
+        <div class="box"><b>曾怡智</b><br/>
+        學習態度……我有千分之一就好了~
+        </div>
+          <div class="box"><b>Ling Ling Yu
+        </b><br/>
+        你超厲害呀，有你在我就是全然交托，無論是工作或生活，都很慶幸自己遇見你😊
+        </div>
+          <div class="box"><b>Xiu Min</b><br/>
+        妳超級厲害，從中文系變成美術編輯，自己學會很多軟體，還會做電子書
+        </div>
+          <div class="box"><b>Tan Wade</b><br/>
+        很棒的自學企圖心，以及很好的執行力
+        </div>
+           <div class="box"><b>Sophia Chuang</b><br/>
+        有任何需要的就先問偉婷會不會，通常都可以得到完美解答超棒！
+        </div>
+          <div class="box"><b>陳雅萍</b><br/>
+        我真心覺得妳厲害，自學程式、自學電子書、還自學了自彈自唱！連幾年前去環島你還在車上閱讀、工作，你應該是我朋友之中，最勤奮認真、努力生活的人了！更厲害的是，兩個孩子在妳潛移默化中，也是熱愛學習的孩子！而且最厲害的是，在最困難的時候，妳都沒有放棄。
+        </div>
+          <div class="box"><b>Phoebe Yang</b><br/>
+        妳是知識型媽咪，超用心安排孩子的興趣與學習，而且標準自主學習的代表啊！！！
+        </div>
+          <div class="box"><b>Hinanoko Lei</b><br/>
+        你願意把娛樂的費用優先用於學習，這一點認真孜孜不倦，很好學！
+        </div>
+            <div class="box"><b>Vivienne Wang
+        </b><br/>
+        「主動」優化流程女王（主動很重要，也是關鍵）、分析控（這個是稱讚）、結論總是能導向正面的王者
+        </div>
+            <div class="box"><b>林祉勤</b><br/>
+        你對文字圖像的咀嚼與表達能力還有超強行動力讓我很佩服!
+        </div>
+            <div class="box"><b>Yu-chun Chien</b><br/>
+        偉婷是最深刻的讀者，也是最貼心的編輯；是文字工作者更是圖像魔術師，更是生活藝術家。<br/><br/>
+        沒有看過可以當數學老師的中文系學徒，也沒有看過一腳跨進程式設計領域，在編碼抓錯的符號海洋裡快樂遨遊，而且還能競圖接案的文科生。<br/><br/>
+        不諳煮食與生活瑣事的台北小妞在日常的磨練下成了能煮上一桌豐盛而且精打細算的二孩之母，把育兒生活的每一步踏實且豐盛的活出自己的風格（就是好學、好問、好好玩的曾偉婷style)然後每個月每年還用excel做家庭收支規劃報告，帶著老公小孩往更好的方向前進。<br/><br/>
+        最最重要的是，曾小姐走過低谷後仍能保持內心的希望和不滅的學習火光，把自己活成一盞燈，在每個朋友需要扶助的時候，點起對方的希望。
+        </div>
+            <div class="box"><b>溫雅淳</b><br/>
+        你的堅持很厲害，遇到瓶頸也會想盡辦法跨過去！就像沒有任何事可以阻止你去做想做的事！<br/>
+        做事腳踏實地一切靠實力，認真精進自己的能力以達到更好的成果！
+        想到美編就會想到你，覺得各種軟體都難不倒你😀<br/>想誇獎你的真的太多❤ 讓人願意付出真心也是喔～因為你也總是親切真心待人😀
+        </div>
+            <div class="box"><b>陳亭亘</b><br/>
+        我很佩服妳的工作跟家庭兩方一起努力的毅力跟能力，WFH早早就已經在實踐的超能力，以及能坦然地把這些寫出來跟大家分享的誠懇，我非常佩服。
+        </div>
+            <div class="box"><b>紀灃酌</b><br/>
+        妳超級厲害，學什麽就會什麽，真正厲害（以下省略技術範疇兩萬里）
+        </div>
+            <div class="box"><b>Dora Chen</b><br/>
+        從國中就優秀到現在啊！<br/>
+        一如往常般厲害 👍<br/>
+        自學程式真的太強大了！<br/>
+        資管系先跪了<br/>
+        </div>
+            <div class="box"><b>廖乙蓉</b><br/>
+        Dora Chen 資管系+1跪妳旁邊<br/>
+        Weiting Tseng妳真的很棒👍🏻國中看妳都笑咪咪的，成績一直都很穩定的在前面，沒想到這只是開始，現在更是優秀👍🏻👍🏻
+        </div>
+           <div class="box"><b>Ho-Chun Lin</b><br/>
+        這是weiting惠我良多的厲害，我學生們心目中的專業美編媽媽，每次交成果出去都讓我很有面子，學生也誇獎。<br/>
+        明年我規劃著作，也要拜託weiting了(先交出膝蓋跪著
+        </div>
+           <div class="box"><b>黃柏軒</b><br/>
+        你根本是人類yamaha
+        </div>
+           <div class="box"><b>劉橞筑</b><br/>
+        勤奮是你的核心，捲起袖子是你的起手式，執行力是天生標配，加在一起就沒有你做不到的事。
+        </div>
+           <div class="box"><b>洪欣怡</b><br/>
+        有想法的人，當決定了目標就一步步實踐。喜歡學習的人，讓自己不斷的吸收新知。是個溫暖的人，帶給身邊的人很多美好。
+        </div>
+           <div class="box"><b>謝佳桃</b><br/>
+        妳超厲害的<br/>
+        文筆很厲害<br/>
+        育兒很厲害<br/>
+        教育很厲害<br/>
+        學什麼像什麼<br/>
+        真的好厲害喔⋯⋯
+        </div>
+           <div class="box"><b>Irene Chou</b><br/>
+        我覺得你的自學能力非常強！
+        </div>
+           <div class="box"><b>Could You</b><br/>
+        除了什麼能力很厲害之外，我覺得樂於分享這點很珍貴
+        </div>
+           <div class="box"><b>黃育蓮</b><br/>
+        你超強好嘛！關於設計、程式的問題，只要跟妳討教，就會有新的解方！
+        </div>
+          <div class="box"><b>Peiyin Lin</b><br/>
+        你超厲害不用懷疑！
+        </div>
+          <div class="box"><b>Chang I-chin</b><br/>
+        你很強啊！想想生育津貼的專輯，外縣市資料是誰做的！有沒有覺得自己很厲害！
+        </div>
+          <div class="box"><b>Shu-Hui Hsu</b><br/>
+        我們認識時候的，角色關係我覺得你很像妹妹，我很喜歡你很認真的感覺，很多難事你都笑笑的（可愛的酒窩）這是我覺得你很棒(厲害）的地方！❤️
+        </div>
+          <div class="box"><b>Tracy Wu</b><br/>
+        你超級厲害，有強大的學習力與行動力！
+        </div>
+           <div class="box"><b>蔡佩真</b><br/>
+        偉婷真的很厲害，喜歡你的內在堅韌而柔軟、對小孩的包容深愛也令我折服，還有充滿藝術細胞能DIY小孩各種教具望塵莫及🤣，又能在親子教育領域發揮專長無人能及，有很多優點集於一身❤️
+        </div>
+           <div class="box"><b>Yuan Yen</b><br/>
+        設計很厲害，學習能力很強，還有行動力極高!!!💪<br/>
+             以前帶社課，教編輯和排版軟體等等很有主題也很有系統性，想當年的InDesign我也是從零跟著你學才上手😎
+        </div>
+           <div class="box"><b>Kuo Pourquoi</b><br/>
+        教編輯和排版軟體等等超級實用！確實可以廣泛運用到很多地方， 一直到現在有時候看雜誌或平面設計的東西，都還會注意一些小地方，哈哈。 / 我想讚美偉婷，是個很有想法、很有執行力的人，我常常想起你分享到誠品求職的過程，也喜歡你分享許多生活、教養、工作經驗，到現在我還常常跟認識的人說：我有個中文系學姊很厲害，讀書的時候自己到書店翻書，回家後不斷認真練習，然後很久之後她真的成為一位美編了，就算中途在家育嬰了一小段時間，也很努力回到職場，現在在知名出版社工作(跟著驕傲)！
+        </div>
+           <div class="box"><b>Mandy Wu</b><br/>
+        你是全才，面面俱到
+        </div>
+           <div class="box"><b>Selena Tsai</b><br/>
+        我覺得偉婷最厲害的是有一顆永遠願意面對挑戰的心！<br/>
+        無論遇到的難題是什麼，是生活或是小孩還是不擅長的事物，都可以慢慢的把它破關。
+        </div>
+           <div class="box"><b>Gin Hsu</b><br/>
+        你超厲害~記得討論maker的發想，妳提的每個想法點子都可行又趣味；設計上因為妳的巧手常出現驚喜作品；然後妳還不斷學習，不斷進步成長~這樣我們大家怎麼活（硬要把大家都拉下水）
+        </div>
+          <div class="box"><b>Alice Mai</b><br/>
+        親愛的妳在我心中是堅強又溫柔的，想做的事情都能堅持到底，想愛的人都如此滿心對待，喜歡和妳聊天，因為充滿能量與愛心💗
+        </div>
+          <div class="box"><b>Wety Huang</b><br/>
+        覺得你很厲害，做事很果決，且很有毅力。高中時毅然決然的換類組，並且持續從事相關工作。
+        </div>
+          <div class="box"><b>Claire Chen</b><br/>
+        你很厲害，從一開始認識你，就能拿著電腦看版，一邊看一邊改，到現在問你電腦大小事可以得到答案，內心有創傷時你也能給我被接住與認同的感受，居家上班時，能和我分享食物們，有你在身邊很幸福，超棒的。
+        </div>
+          <div class="box"><b>Yun Kuan</b><br/>
+        埋頭苦幹是大學認識的妳，堅持的背後充滿著探究學習的勇氣與毅力，即便生活裡遇到難題，妳都帶著愛與包容往前克服。水到渠成的妳，找到自信光彩後，將熱力散發出去，很美！曖曖內含光的妳，是我們一輩子可以請益的第一人選！
+        </div>
+            <div class="box"><b>Chinty Huang</b><br/>
+        在該吹毛求疵的地方不放過自己很厲害，所以能力、能量一直擴充；在逼死自己的地方很厲害，所以常常看妳鬼吼鬼叫又死去活來；滿血復活的能力很厲害，有些八百年前聽過覺得我絕對無法接受的事情妳都還是活著走到現在了；在讓小孩自己閱讀這塊很厲害，我姪子姪女到現在都只有寶可夢跟YouTube跟mono親子台…怎樣都好像有點難好好坐著看完一本稍微有點知識性的書📖⋯⋯
+        </div>
+            <div class="box"><b>WU Chiujung</b><br/>
+        我是個萍水相逢的網友，但我覺得妳是個很會實現「文字的力量」的人，我認為妳有用中文感動人心的能力，我想妳應該很會教人「如何說自己的故事」❤️
+        </div>
+            <div class="box"><b>陳怡靜</b><br/>
+        自從你把教師衣服換顏色後，我看到你都會起立敬禮。<br/>
+        記得當時你說，看到別人會，自己不會就會想學會，我覺得這種精神太令人佩服了，你超厲害呀！
+        </div>
+          <div class="box"><b>Shell Huang</b><br/>
+        首先「厲害」這兩個字，我覺得不能恰如其分的形容妳。我見過很多厲害的人，有些是能力超群，有些是手腕高明，有些是外型出眾，有些是態度敬業，然而妳的厲害，來自於妳勤能補拙的毅力、上窮碧落下黃泉學習的動力、一絲不苟的正直、以及妳數十年如一日對人對己的真誠。妳很少計較自己付出多少，也很少計較付出能回收多少；在無數次為了助人卻害慘了自己的慘痛教訓中，終於長出了一點能拒絕與捍衛自己權益的能力；你從不吝惜分享與給予，在專業領域上有難以妥協的對完美的執著，把工作跟任務交給妳可以高枕無憂，因為妳可以舉一反三順便斜槓把週邊都一起做完。<br/>
+        我見過很多厲害的人，但如此厲害、無私又真誠的妳，真的是非常非常難得。
+        </div>
+          <div class="box"><b>Dai Nung</b><br/>
+        我印象中的你，對於突發狀況的應變能力很好，而且很獨立，最重要的是，就算遇到不那麼如意的事情，你都能以正能量的方式去處理與面對😊
+        </div>
+          <div class="box"><b>Candice Lin</b><br/>
+        萬能的設計，體貼的設計，對自己永保挑戰之心的厲害朋友
+        </div>
+          <div class="box"><b>林胤斈</b><br/>
+        偉婷超級厲害～～不僅是超級快手（快到讓我反應不過來），超多技能竟然自學就能解鎖🔓令人崇拜🤩
+        </div>
+          <div class="box"><b>Evelyn Chung</b><br/>
+        一切盡在不言中，［厲害］這個詞已經無法形容妳了～ 你說第二沒人敢說第一～哈哈哈٩(˃̶͈̀௰˂̶͈́)و
+        </div>
+          <div class="box"><b>No New Ya</b><br/>
+        我覺得我第一時間不會想到「厲害」這個詞，但是一種「很讓我能說出來得意驕傲」的朋友！為了自己喜歡的目標就開始啟程耕耘撒種，即使中間繞著順道完成其他目標，但其實一直努力堅定地走，然後轉瞬間發現已成可靠大樹的類型。為了關係做了許多付出，但也從鞭策自己到最後「蛻變」成蝴蝶找到讓自己較舒服的位置。雖然生命還有很長的下半段，但相信依舊平凡而精彩！溫暖且有愛！智慧迷人兼具的女人！
+        </div>
+          <div class="box"><b>Ya-ting Tsai</b><br/>
+        你溫柔又堅強，我期許自己也能像你一樣去解決總總的問題
+        </div>
+          <div class="box"><b>Doris Jeng</b><br/>
+        覺得妳很厲害！從我認識妳正開始要離開台南到台北，舉家遷往移的過程，是用了許多智慧醞釀的決定！<br/>
+        到現在仍然保持滾動不遲疑的心！謝謝妳讓我看見正向積極爭取，也切實履行對自己的承諾，妳很棒！
+        </div>
+        </div>
+
+          <br/>
+          <br/>
+       
+          
+    <script>
+        $('.facsbookFriends,.illustrator,.contect').hide();
+        $('#btnA').click(function(){
+            $('.web').fadeToggle();
+            $('.facsbookFriends').hide();
+            $('.illustrator').hide();
+            $('.contect').hide();
+        });
+        $('#btnB').click(function(){
+            $('.illustrator').fadeToggle();
+            $('.facsbookFriends').hide();
+            $('.web').hide();
+            $('.contect').hide();
+        });
+        $('#btnC').click(function(){
+            $('.facsbookFriends').fadeToggle();
+            $('.web').hide();
+            $('.illustrator').hide();
+            $('.contect').hide();
+
+        });
+        $('#btnZ').click(function(){
+            $('.contect').fadeToggle();
+            $('.web').hide();
+            $('.illustrator').hide();
+            $('.facsbookFriends').hide();
+
+        });
+        
+    </script>
 </body>
 </html>
