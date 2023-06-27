@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HI, I'm waiting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* *{border: 1px solid #000;} */
+        html,body{margin: 0;padding: 0;position: relative;font-family: 'Noto Sans TC', sans-serif;}
+        body{background-color: #F3EADE;padding-top:90px;padding-bottom: 100px;}
+        a{color: #000;text-decoration: none;}
+        h2{font-size: 30px;font-weight: 400;margin-top: 60px;}
+        nav{z-index: 99;width:calc(100vw - 370px);height: 30px;padding:30px 20px 30px 350px;display: flex;justify-content:space-between;align-items: center;position: fixed;top:0;left:0;background-color: #F3EADE;}
+        .nav-right{background-color: #F9F6F3;width:190px;border-radius: 100px;padding: 10px 20px;font-size: 12px;justify-content:space-between;align-items: center;display: none;}
+        .articleNav{width: 100px;position: fixed;bottom: 50px;right: 50px;display: flex;flex-wrap: wrap;justify-content:center;align-items: center;z-index: 9;}
+        .articleNav .btnB{margin-top: 20px;}
+        .articleNav .btnCs{display: flex;flex-wrap: wrap;justify-content:center;align-items: center;}
+        footer{position: relative;padding-left:250px;margin-top: 90px;}
+        aside{z-index: 100;background-color: #F9F6F3;width: 300px;padding-top:60px;height: 100vh;position: fixed;top:0;left:0;}
+        aside .info{max-width:180px;margin:0 auto;text-align:left;padding:0 2em 0 .5em;font-size: 12px;font-weight: 400;}
+        .articles{margin: 0 200px 0 350px;}
+        .articles #A,.articles #B,.articles #C,.articles #D{background-color: #F9F6F3;border-radius: 30px;padding: 6em;margin-bottom: 2em;display: flex;align-items: flex-start;}
+        .articles h2{font-size: 80px;width: 300px;margin: 0;}
+        .articles .article{width: calc(100% - 200px);margin-top: 1em;}
+        footer{text-align: center;font-size: 14px;font-weight: 300;}
+        .btnA{margin-right:20px;cursor: pointer;}
+        .btnA:hover{text-decoration: underline;text-underline-offset: 5px;text-decoration-thickness: 1px;}
+        .btnB{border: 1px solid #000;border-radius: 2em;padding:0.2em 1em;cursor: pointer;}
+        .btnB:hover{background-color: #000;color: #fff;}
+        .btnC{font-size: 20px;text-decoration: underline;text-underline-offset: 5px;text-decoration-thickness: 1px;margin:10px 0;cursor: pointer;}
+        .btnC:hover{opacity: 0.5;}
+        .Noshow700{display: initial;}
+        .show700{display: none;}
+
+        .connect-fixed{position: fixed;top:22px;right:50px;z-index: 999;width: 45px;height: 45px;background-color: #fff;border-radius: 45px;display: flex;justify-content:center;align-items: center;}
+        .connect-fixed img{width: 20px;height: 20px;}
+        #A:target,#B:target,#C:target,#D:target{padding-top: 100px;}
+        .myprofile,.myprofile .info{display: none;}
+        @media screen and (max-width:1440px) {
+            .articles #A,.articles #B,.articles #C,.articles #D{padding: 3em;}
+            #A:target,#B:target,#C:target,#D:target{padding-top: 100px;}
+        }
+        @media screen and (max-width:1200px) {
+            .articles #A,.articles #B,.articles #C,.articles #D{flex-wrap: wrap;}
+            .articles .article{width: calc(100%);}
+        }
+        @media screen and (max-width:1100px) {
+            nav{width:calc(100vw - 270px);padding:30px 20px 30px 250px;}
+            .articles{margin: 0 200px 0 250px;}
+            footer{padding-left:200px;}
+            aside{width: 200px;}
+            aside .info{max-width:150px;}
+        }
+        @media screen and (max-width:1000px) {
+            nav{width:calc(100vw - 100px);padding:30px 20px 30px 80px;}
+            .articles{margin: 0 200px 0 80px;}
+            footer{padding-left:40px;}
+            aside{width:40px;}
+            aside div{display: none;}
+            .myprofile,.myprofile .info{display:initial;}
+            .myprofile{background-color: #F9F6F3;border-radius: 30px;padding: 3em;margin-bottom: 2em;display: flex;align-items: flex-start;flex-wrap: wrap;}
+            
+        }
+        @media screen and (max-width:900px) {
+            .articles{margin: 0 150px 0 80px;}
+            footer{padding-left:55px;}
+            .connect-fixed{bottom:30px;right:30px;}
+        }
+        @media screen and (max-width:700px) {
+            .articles{margin: 0 100px 0 80px;}
+            .articleNav{width: 80px;right: 10px;}
+            .Noshow700{display: none;}
+            .show700{display: initial;}
+        }
+        @media screen and (max-width:600px) {
+            nav{width:calc(100vw - 80px);padding:30px 20px 30px 60px;}
+            /* nav{flex-wrap: wrap;flex-direction:column-reverse;width:calc(100vw - 40px);height: 50px;padding:10px 20px 10px 20px;} */
+            .nav-right{margin: 15px 0;}
+            .articles{margin: 0 20px 0 20px;}
+            .articles #A,.articles #B,.articles #C,.articles #D,.myprofile{padding: 40px;}
+            #A:target,#B:target,#C:target,#D:target{padding-top: 100px;}
+            .articleNav{width:calc(100% - 40px);bottom: 0;right: 0px;background-color: #F3EADE;height: 60px;flex-wrap: nowrap;align-items: center;justify-content:space-between;padding: 0 20px;}
+            .articleNav .btnB{margin-top: 0px;}
+            .articleNav .btnCs{flex-wrap: nowrap;}
+            .articles h2{font-size: 50px;}
+            .btnC{font-size: 14px;margin: 0 5px;}
+            
+            footer{padding-left:10px;margin-top: 50px;}
+            aside{width:10px;}
+            /* #A:target,#B:target,#C:target,#D:target{padding-top: 150px;} */
+        }
+        @media screen and (max-width:450px) {
+            nav{width:calc(100vw - 60px);padding:30px 20px 30px 40px;}
+            .articles #A,.articles #B,.articles #C,.articles #D,.myprofile{padding: 20px;}
+            #A:target,#B:target,#C:target,#D:target{padding-top: 100px;}
+            .connect-fixed{top:20px;right:20px;}
+        }
+    </style>
+</head>
+<body>
+      
+
+    <a href="mailto:weitientwt@gmail.com"><div class="connect-fixed"><img src="img/email.png"/></div></a>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html#A" class="btnA navA">印刷品設計</a>
+            <a href="index.html#B" class="btnA navB">數位設計</a>
+            <a href="index.html#C" class="btnA navC" style="margin-right:0px;">創作</a>
+        </div>
+    </nav>
+    <div class="articleNav">
+        <div class="btnCs">
+        <a class="btnC" href="#A">家人。</a>
+        <a class="btnC" href="#B">學習。</a>
+        <a class="btnC" href="#C">工作。</a>
+        <a class="btnC" href="#D">技能。</a>
+        </div>
+        <a href="index.html" class="btnB">home</a>
+    </div>
+    <aside>
+        <div class="info">
+         <div class="myphoto" style="width:100px;height:100px;
+        border-radius:100px;overflow:hidden;line-height: 0px;"><img src="https://picture-original.fevercdn.com/page-parenting-2022421-1c54cd4c-71c9-430a-ac39-6dc7566900c6.jpg" style="width:100%;height:100%;"/></div>
+
+        <br/>Hi, I’m waiting. 我是偉婷。<br/><br/>
+
+        很高興看到你來到這裡，我整理了關於我的許多作品，雖不一定時常更新，如果你想儘快認識我，應該也能有一些幫助。<br/><br/>
+        
+        提供我的聯繫方式：<br/>
+        weitientwt@gmail.com
+        </div>
+    </aside> 
+    <div class="articles">
+        <section class="myprofile">
+            <div class="info">
+                <div class="myphoto" style="width:100px;height:100px;
+               border-radius:100px;overflow:hidden;line-height: 0px;"><img src="https://picture-original.fevercdn.com/page-parenting-2022421-1c54cd4c-71c9-430a-ac39-6dc7566900c6.jpg" style="width:100%;height:100%;"/></div>
+       
+               <br/>Hi, I’m waiting. 我是偉婷。<br/><br/>
+       
+               很高興看到你來到這裡，我整理了關於我的許多作品，雖不一定時常更新，如果你想儘快認識我，應該也能有一些幫助。<br/><br/>
+               
+               提供我的聯繫方式：<br/>
+               weitientwt@gmail.com
+            </div>
+        </section>
+        <section id="A">
+            <h2>家人。</h2>
+            <div class="article">1.<br>
+                兒時所居的臨近之地有個工業區，有一段時間，讀大學的大姐會去拿些家庭代工來做。
+                晚飯後，開著電視的休閒時間裡，一邊幫商品貼上貼紙，大抵是家裡善用時間的日常光景。
+                貼著貼著，一家人不覺較勁了起來，從多少時間裡誰貼得多，到多少時間裡誰貼得又多又好，
+                昇華到多少時間裡誰貼得不僅多且好，工作起來還很有方法，我們討論著貼紙怎麼拿，怎麼撕商品怎麼擺，誰的方式聰明又省力。
+                <br><br>
+                這就是我們的家庭風格。
+                <br><br>
+                2.<br>
+                清晨，那時我還在第一份工作裡當雜誌的美術編輯。我半睏的坐在客廳沙發，混屯。父親出了房門，見我稀奇的早起，問了句：「今天怎麼這樣早？」我回答：「等等要去印刷廠看印。」父親就將我趕出了門：「怎麼還懶著？快出門。」於是我早到了一個小時，在印刷廠外，只好看點書。
+                <br><br>
+                這就是我的父親風格。
+                <br><br>
+                3.<br>
+                2000年的經濟泡沫飄到我家。父親收了公司，母親找了塊地，他們倆就種菜去了。種了十幾年，我高中畢業、大學畢業，連孩子都生了。可我一次也做不到我母親的日常行程。
+                <br><br>
+                三、四點起來，採收青菜。採收十幾二十籃。然後開始整理清洗，弄完通常是中午時分。吃幾口飯再躺著休息，往往休不到半小時。然後開著車，從桃園回到新莊，再休息一小會兒。就在路邊賣菜賣到天黑。菜價高時，傍晚就能回家，菜價低時，賣到半夜十一、二點也有。
+                <br><br>
+                這是我的母親風格。
+                <br><br>
+                4.<br>
+                長姊如母。大姐特別愛看書，家裡的書看完了，也就一兩個牆面。她就去圖書館裡看。總是整櫃整櫃的看完。考上大學後，第一個暑假回家，我哀嘆，好多作家我都不認識，好羞愧。大姐輕輕嘆氣，她都讀過，也不明白我怎麼跑去讀中文系。
+                <br><br>
+                這是我的大姐風格。
+                <br><br>
+                5.<br>
+                二姐擅玩。我去台南讀書，除了學校、圖書館、租屋處、打工地，哪裡也不太曉得。她來了兩個月，附近巷子哪裡好吃好玩都可以幫我介紹。後來她決定去當幼兒園老師。她想去偏鄉公幼，考了十年，才知道原來她有閱讀障礙。可是還是一直讀一直考，去了宜蘭、新北、阿里山、新竹，流浪來流浪去。比國父革命十一次，再多一點，她考上了。小時候，爸媽還擔心她跟著混混不回家了，結果成了家裡唯一的老師。
+                <br><br>
+                這是我的二姐風格。
+                <br><br>
+                6.<br>
+                小弟聰慧。小時候我總是勤奮的讀書，小弟則是全家人沒看過他讀書。但他拿校長獎，考上前三志願。上高中的時候，他說要騎腳踏車上學，我們當他開玩笑。但他就這樣從新莊騎腳踏車，過兩座橋進台北市讀書，騎了一段時間。到現在我還是不知道他在想什麼。
+                <br><br>
+                這是我的小弟風格。
+                </div>
+        </section>
+        <section id="B">
+            <h2>學習。</h2>
+            <div class="article">1.<br>
+                兒時我不太讀書，上課總是在畫畫。有一回，同學問我，怎麼可以仿畫美少女戰士仿畫得栩栩如生。我答，就是天天畫，天天練習。那一次期中成績，全班都退步了些。班導師點了名，叫大家別學我。
+                <br><br>
+                2.<br>
+                後來，我自告奮勇想做教室佈置。班導師說，讓我理解其他同學對這件事的期待，否決了我的參與。這些其他同學剛好都是班上前十名的，我想，如果我也前十名，是不是就能做自己想做的事？
+                <br>
+                所以我開始讀書。剛好那之後上了國中。我就好好待在全班前五名裡面，做了三年的教室佈置，得到無數的特優海報。我想，我大抵是沒搞錯方向。
+                <br>
+                然後，我就不能去讀高職學做設計，而去讀了普通高中。很多年以後，我才搞懂，我真是搞錯了。
+                <br><br>
+                3.<br>
+                讀高中的時候，日子很簡單。讀書考試，做校刊。考大學的時候，還未成年，爸媽說讀私立的學費要自己負責。我怎麼算，也不知道怎麼自己負責。所以填我唯一知道有設計學院的公立大學。就這樣去台南讀書了。
+                <br><br>
+                4.<br>
+                上大學以後，本來想轉系。才發現工業設計、建築設計好像和視覺設計差滿多的。也就作罷。反正一邊讀書，一邊自己學習喜歡的事情，已經成為日常。也就滿腦子朝著成為專業的美術編輯前進。
+                <br><br>
+                5.<br>
+                再接著，隨著時代的變換。自學網頁設計、自學程式語言、自學UI/UX、自學PM。我已經習慣如果有空下來的時間，就隨便學點好奇的事情。
+                <br><br>
+                學習，就是我打發時間的休閒興趣。
+
+                </div>
+        </section>
+        <section id="C">
+            <h2>工作。</h2>
+            <div class="article">1.<br>
+                年少時，少女情懷總是詩。喜歡《誠品好讀》，就死皮賴臉的一直寄信去求一個打工的機會。在那裡工作的時光，就像浪漫的回憶，沒什麼理性。很崇拜所有的同事，後來人員縮編，我真心覺得我最菜也最鳥，自請調離。
+                <br><br>
+                2.<br>
+                在誠品，擔任北區書店美術設計時，年紀是最小的，同事就把童書館都交給我。我很喜歡手作，企劃同事也總會想很有趣的事。就這樣一起合作，做了很多現在回想起來還是很好玩的佈置。
+                <br><br>
+                3.<br>
+                可是我還是喜歡做雜誌，所以後來有機會，我就去了時尚雜誌的企業刊物部工作。薪水也比較好。然後我才發現，我不太適應為香車寶馬工作，斷然求去。
+                <br><br>
+                4.<br>
+                因為對職涯的迷茫，去了藝術大學做了一段時間的專案助理，手上負責的執行計畫，包含一個駐校文學作家的子計劃。總是陪著聽他和學生聊天，聽著聽著，又找回了對出版工作的熱情。計畫尾聲，看到喜歡的公司在招募美術編輯，我便去了。
+                <br><br>
+                5.<br>
+                這次我以為，大概就是一輩子，然後就遇上麵包還是愛情的選擇題。我選了愛情，為了家庭，辭去了工作。那時候還沒三十歲，身體裡還有過剩的浪漫細胞。
+                <br><br>
+                6.<br>
+                家庭主婦成了我的偽裝，我開始接案，靠著親友介紹，收入也算穩定，可是不太有機會做書或雜誌。我就成立工作室，想說自己創造機會。
+                <br><br>
+                7.<br>
+                生了場病，丈夫決定陪我回台北，讓我回雜誌社工作。我就回到職場，從零開始。
+                <br><br>
+                8.<br>
+                就在我越做越起勁的時候。兒子説：媽媽，我想自學。人生的十字路口怎麼那麼多？掙扎了一段時間，我申請留職停薪陪他。
+                <br><br>
+                9.<br>
+                2023年我做了這個網站，看看人生的故事還可以怎麼演。
+                </div>
+        </section>
+        <section id="D">
+            <h2>技能。</h2>
+            <div class="article">1.<br>
+                高中的時候，校刊社社長拐帶我去參加編輯營。社長都在睡，我倒是學了點pagemaker。回來，老師說我們拿著公費去，必須回饋學校。我就要教大家使用或是負責編出東西。教學和實務演練是最務實的訓練。
+                <br><br>
+                2.<br>
+                上了大學，indesign取代了pagemaker。大一班刊本來是用pagemaker做，印刷時有點問題，幫忙印製的學長問我可不可以改用indesign？我就去圖書館借了本書，一週沒怎麼睡覺的學會用indesign，把班刊給送印了。然後就開始教很多人使用indesign，斷斷續續，到2023年還在教。
+                <br><br>
+                3.<br>
+                後來立了志要做出版。只是聽說，應該要會photoshop，但是還買不起書，圖書館也總是排隊不到。我乾脆去誠品看書，每次看兩頁背在腦裡，回到家就開電腦練習。然後給自己很多作業，不斷練習各種技巧。悶聲不吭，看到新技巧，就跟著學一下。
+                <br><br>
+                4.<br>
+                到書店工作時，反而要常用illustrator。所以我就偷看同事怎麼用，自己找網路上的教學練習。堪堪夠應付工作。
+                <br><br>
+                5.<br>
+                曾經有人看著我的學歷，說我大概花了不少錢。我不敢回答。如果時間是金錢，那真的是花了不少。
+                <br><br>
+                6.<br>
+                我嫌棄自己基礎功不扎實。就五點爬起來練習素描和水彩。就練一段時間。後來工作忙，常常清晨回家，就中斷了。
+                <br><br>
+                7.<br>
+                大學的時候，有在計算機中心修過兩門課。學了點dreamweaver和flash。剛出社會時，還有用這兩工具接了點案子，賺點外快可以去日本旅行。但都已經被時代淘汰。
+                <br><br>
+                8.<br>
+                看網路上有人說，寫程式就是從原始碼寫才專業。我就信了。開始以google為老師。一邊在家帶孩子，一邊練習手刻網頁。2014年開始有幾個客戶信賴我。我就有機會實務練習了三十個網頁。html和css的基礎這樣慢慢建立起來。
+                <br><br>
+                9.<br>
+                後來喜歡互動網頁。就繼續練習寫javascript、jquery、vue。工作上有機會應用，就實務練習了十幾個網頁。
+                <br><br>
+                10.<br>
+                在家工作的那段日子，一直很怕被時代淘汰。又是看到網路上說，電子書怎樣怎樣的。我就爬國外論壇，學會寫epub電子書。後來孩子的安親費，我就靠寫了上百本的電子書，把帳單付了。
+                <br><br>
+                11.<br>
+                公司安排我轉調部門的時候，主管也不知道怎麼安頓我合適。我也不知道。
+                <br><br>
+                所以她給我安了什麼職稱，我就認認真真去學什麼專業。所以學了幾個工具、略懂了點UI/UX、略懂了點互動設計再略懂了點PM。都是剛好可以完成公司交付的任務，皆大歡喜的程度。
+                
+                </div>
+        </section>
+    </div>
+    
+    
+    <footer>
+        <p>2023.06 更新｜設計・製作：曾偉婷</p>
+    </footer>
+
+    <!-- <script>
+        const swiper = new Swiper('.mySwiper', {
+        autoplay: {
+        delay: 1000,
+        },
+        });
+    </script> -->
+    <script>
+        $('.navA').click(function(){ $('html,body').animate({scrollTop:$('#A').offset().top - 100}, 500);});
+        $('.navB').click(function(){ $('html,body').animate({scrollTop:$('#B').offset().top - 100}, 1000);});
+        $('.navC').click(function(){ $('html,body').animate({scrollTop:$('#C').offset().top - 100}, 1000);});
+    </script>
+</body>
+
+</html>

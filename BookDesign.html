@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HI, I'm waiting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* *{border: 1px solid #000;} */
+        html,body{margin: 0;padding: 0;position: relative;font-family: 'Noto Sans TC', sans-serif;}
+        body{background-color: #F3EADE;padding-top: 90px;}
+        a{color: #000;text-decoration: none;}
+        img{width: 100%;height: auto;}
+        h2{font-size: 80px;line-height: 100%;font-weight: 400;margin-top: 60px;z-index: 9;}
+        nav{z-index: 99;width:calc(100vw - 200px);padding:30px 100px;height: 30px;display: flex;justify-content:space-between;align-items: center;position: fixed;top:0;left:0;background-color: #F3EADE;}
+        .nav-right{background-color: #F9F6F3;width:190px;border-radius: 100px;padding: 10px 20px;font-size: 12px;display: flex;justify-content:space-between;align-items: center;}
+        
+        section{position: relative;max-width: 1440px;margin: 0 auto;}
+        .boxA,.boxB{width: calc(100% - 40px);position: relative;display: flex;justify-content:space-between;align-items: top;padding: 0 20px;}
+        .boxA h2{position: absolute;top:-60px;left: 35%;}
+        .boxA .imgcover{position: absolute;top:0;left:0;width: 100%;height: 100%;background: linear-gradient(125.17deg, #F3EADE 1.93%, rgba(217, 217, 217, 0) 42.95%);transform: matrix(-1, 0, 0, 1, 0, 0);}
+        .boxB{display: flex;align-items: start;}
+        .boxB1,.boxB2{display: flex;flex-wrap: wrap;justify-content:space-between;align-items: start;}
+        .boxB1 .textA{margin-top: -40%;}
+        .boxB1{width: 52%;margin-right: 30px;}
+        .boxB2{width: 48%;}
+        .boxC{width: calc(100% - 40px);display: flex;align-items: start;flex-wrap: wrap;justify-content:space-between;margin: 0 20px;}
+        .boxC h2{position: absolute;top:-200px;right: 17%;}
+        .boxD{width: 70%;max-width: 1200px;margin: 0 auto;}
+        .boxE{margin: 0;}
+        .boxEkids{width: 100%;display: flex;flex-wrap: wrap;justify-content:space-between;position: relative;}
+        .typeA{width: calc(40% - 10px);height: auto;position: relative;}
+        .typeB{width: 60%;}
+        .typeBkids{width: 100%;display: flex;position: relative;}
+        .typeB1,.typeB2,.typeB3{width: calc(33% - 10px);height: auto;margin: 0 10px;}
+        .typeB1{margin-top:40%;}
+        .typeB2{margin-top:20%;}
+        .typeC1,.typeC2,.typeC3{width: 30%;}
+        .typeC2{margin-top: 20%;}
+        .typeC3{margin-top: 40%;}
+        .typeD{width: 32%;margin: 5px 0;}
+        .typeE{width: 24%;}
+        .typeF{width: 100%;}
+        .typeG{width: 49%;}
+        .textA{width: 95%;max-width: 200px;margin-top: 15px;font-size: 14px;line-height: 140%;font-weight: 300;}
+        .textB{width: 100%;margin-top: 0px;font-size: 14px;line-height: 140%;font-weight: 300;}
+
+        #B{margin-top: -150px;}
+        #C{margin-top: 20px;}
+        #D{margin-top: 50px;}
+        #E,#F,#G,#H,#I{margin-top: 2em;}
+        #K,#L{margin: 50px 20px 0;}
+        #J{margin-top: 100px;}
+        #J h2{position: absolute;top:-170px;left:50%;width: 6em;}
+        #J .typeA{width: 25%;margin-right: 10px;}
+        #J .typeB{width: 75%;}
+        #J .typeB1{margin-top: 0;}
+        #J .typeB2{margin-top: 15%;}
+        #B:target,#C1:target,#C2:target,#D:target,#E:target,#F:target,#G:target,#H:target,#I:target,#J:target,#K:target,#L:target{padding-top: 100px;}
+        footer{width: calc(100vw);text-align: center;font-size: 14px;font-weight: 300;margin-top: 100px;}
+
+        .btnA{margin-right:20px;cursor: pointer;}
+        .btnA:hover{text-decoration: underline;text-underline-offset: 5px;text-decoration-thickness: 1px;}
+        .btnB{border: 1px solid #000;border-radius: 2em;padding:0.2em 1em;cursor: pointer;}
+        .btnB:hover{background-color: #000;color: #fff;}
+        
+        .Noshow550{display: initial;}
+        .show550{display: none;}
+        
+
+        .connect-fixed{position: fixed;bottom:50px;right:50px;z-index: 999;width: 45px;height: 45px;background-color: #fff;border-radius: 45px;display: flex;justify-content:center;align-items: center;}
+        .connect-fixed img{width: 20px;height: 20px;}
+
+        @media screen and (max-width:1200px) {
+        }
+        @media screen and (max-width:1100px) {
+            nav{width:calc(100vw - 40px);padding:30px 20px;}
+           /* footer{} */
+            /* section{} */
+        }
+        @media screen and (max-width:1000px) {
+            /* footer{padding-left:40px;} */
+            #D{margin-top: 100px;}
+            /* section{padding-left:80px;} */
+            
+        }
+        @media screen and (max-width:900px) {
+            .boxA{flex-wrap: wrap;justify-content:left;}
+            .boxA h2{left: auto;right: 20px;}
+            .boxB{flex-wrap: wrap;}
+            .boxB1{width: 100%;margin-right: 0px;}
+            .boxB2{width: 100%;margin-top: 30px;}
+            .boxC h2{right: 10%;}
+            .boxD{width: calc(100% - 40px);}
+            
+            .typeA{width: calc(60% - 20px);margin: 0 10px;}
+            .typeB{width: calc(100% - 0px);}
+            .typeBkids{width: calc(100% - 0px);}
+            .typeB1,.typeB2,.typeB3{width: calc(40% - 20px);margin: 0 10px;}
+            .typeB1{position: absolute;margin-top:0%;top:-50%;right:0;}
+            .typeB2{margin-top:10%;}
+            .typeB3{margin-top:35%;}
+            .typeE{width: 49%;margin: 10px 0;}
+            .typeG{width: 100%;}
+            #B{margin-top: 20px;}
+            #B .typeBkids{justify-content:right;}
+            #B .typeB2{margin-top:20%;}
+            #B .typeB3{margin-top:20%;}
+            #J{margin-top: 200px;}
+            #J h2{top:-250px;left:20px;}
+            #J .typeA{width: 50%;margin-right: 10px;}
+            #J .typeB{width: 100%;}
+            #J .typeBkids{justify-content:right;}
+            #J .typeB1{margin-top: 0%;}
+            #J .typeB2{margin-top: 20%;}
+            #J .typeB3{margin-top: 20%;}
+            .connect-fixed{bottom:30px;right:30px;}
+        }
+        @media screen and (max-width:700px) {
+            
+        }
+        @media screen and (max-width:600px) {
+            body{padding-top: 120px;}
+            nav{flex-wrap: wrap;flex-direction:column-reverse;width:calc(100vw - 40px);height: 100px;padding:10px 20px;}
+            .nav-right{margin: 15px 0;}
+            footer{padding-left:10px;margin-top: 160px;}
+        }
+        @media screen and (max-width:550px) {
+            h2{font-size: 50px;}
+            .boxA{width: calc(100vw - 20px);padding: 0 10px;overflow: hidden;display: block;}
+            .boxB1 .textA{margin-top: 0%;}
+            .boxC h2{top:-130px;}
+            .boxE{width: 100vw;overflow: scroll;}
+            .boxEkids{width: 200vw;}
+            .typeA{width: calc(100% - 10px);margin: 5em 5px 20px;}
+            .typeB{width: 100vw;overflow: scroll;}
+            .typeBkids{width: 200vw;}
+            .typeB1,.typeB2,.typeB3{width: calc(70% - 20px);margin: 0 10px 20px;}
+            .typeB1{position: relative;margin-top:0%;top:0;right:0;}
+            .typeC1,.typeC2,.typeC3{width: 49%;}
+            .typeC2{margin-top: 20%;}
+            .typeD{width: 49%;margin: 5px 0;}
+            .typeG{width: 200vw;}
+            .textA{width: 100%;max-width: 500px;}
+            #B{margin-top: -50px;}
+            #B .typeBkids{justify-content:left;}
+            #B .typeB2{margin-top:0%;}
+            #B .typeB3{margin-top:0%;}
+            #J{margin-top:0px;}
+            #J h2{top:-30px;left:20px;}
+            #J .typeA{width: calc(100% - 10px);margin-top: 150px;}
+            #J .typeB1{margin-top: 0%;}
+            #J .typeB2{margin-top: 0%;}
+            #J .typeB3{margin-top: 0%;}
+            /* #K .boxC,#L .boxC{display: block;} */
+            .Noshow550{display: none;}
+            .show550{display: initial;}
+            .connect-fixed{bottom:20px;right:20px;}
+        }
+    </style>
+</head>
+<body>
+      
+
+    <a href="mailto:weitientwt@gmail.com"><div class="connect-fixed"><img src="img/email.png"/></div></a>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html#A" class="btnA navA">印刷品設計</a>
+            <a href="index.html#B" class="btnA navB">數位設計</a>
+            <a href="index.html#C" class="btnA navC" style="margin-right:0px;">創作</a>
+        </div>
+        <div class="nav-right">
+            Hi, I’m waiting.
+            <a href="Article.html" class="btnB">Reading</a>
+        </div>
+    </nav>
+   
+    <div class="All">
+    <section class="boxA" id="A">
+    <h2>Cover<br/>Design</h2>
+     <div class="typeA">
+        <div class="img"><img src="img/cover01.jpg"/><div class="imgcover"></div></div>
+        <div class="textA">繪本美術編輯。我們的工作就是花很多功夫，然後讓自己完全沒有存在感，那便是最成功。從內文字體的反覆微調到封面標題字的細緻雕琢，一筆一劃細緻處理到貼切呼應內文。</div>
+     </div>
+     <div class="typeB">
+        <div class="typeBkids">
+            <div class="typeB1">
+                <div class="img"><img src="img/cover02.jpg"/></div>
+                <div class="textA">彩稿來得比預計期程晚，因此手刀兩小時做出封面提案，其實是有超前部署，拿到草稿時，就已經開始試畫好幾款封面字，換過幾種筆刷質感，為了吸睛銷售更多提一款不用原定的封面初稿，站在共同夥伴的角色，用提案溝通為產品創造更好的可能性。</div>
+            </div>
+            <div class="typeB2">
+                <div class="img"><img src="img/cover03.jpg"/></div>
+                <div class="textA">翻譯書的製作看似輕省，但外文和中文字的空間感不同，要保留原來繪本的閱讀呼吸感，全靠不動聲色的修圖工作，修到看不出來有修過，也包含協助補上手寫注音以及封面字體重繪。
+                </div>
+            </div>
+            <div class="typeB3">
+                <div class="img"><img src="img/cover04.jpg"/></div>
+                <div class="textA">貓巧可手作遊戲書，工作包含封面設計、手作刀模頁面繪製、故事和操作說明的內頁版面設計，為貼近原畫作風格，也繪製封面標題字和版面設計元素。</div>
+            </div>
+        </div>
+     </div>
+    </section>
+    <section class="boxA" id="B">
+        <div class="typeA">
+            <div class="img"><img src="img/cover05.jpg"/></div>
+            <div class="textA">組裝玩具盒與書盒設計。<br/>用鮮明的插畫或角色IP作為視覺焦點，搭配各樣的手感字體，兼顧童趣和吸睛目的。</div>
+         </div>
+         <div class="typeB">
+            <div class="typeBkids">
+                <div class="typeB1"><div class="img"><img src="img/cover06.jpg"/></div></div>
+                <div class="typeB2"><div class="img"><img src="img/cover07.jpg"/></div></div>
+                <div class="typeB3"><div class="img"><img src="img/cover08.jpg"/></div></div>
+            </div>
+        </div>
+    </section>
+    <section class="boxB" id="C">
+        <div class="boxB1" id="C1">
+            <div class="typeC1">
+                <div class="typeC"><div class="img"><img src="img/coverC05.jpg"/></div></div>
+                <div class="typeC"><div class="img"><img src="img/coverC06.jpg"/></div></div>
+                <div class="typeC show550"><div class="img"><img src="img/coverC03.jpg"/></div></div>
+            </div>
+            <div class="typeC2">
+                <div class="typeC"><div class="img"><img src="img/coverC01.jpg"/></div></div>
+                <div class="typeC"><div class="img"><img src="img/coverC02.jpg"/></div></div>
+                <div class="typeC show550"><div class="img"><img src="img/coverC04.jpg"/></div></div>
+            </div>
+            <div class="typeC3 Noshow550">
+                <div class="typeC"><div class="img"><img src="img/coverC03.jpg"/></div></div>
+                <div class="typeC"><div class="img"><img src="img/coverC04.jpg"/></div></div>
+            </div>
+            <div class="textA">電子書與成人書封面設計。<br/>將圖像素材透過影像編修，或是手繪可用的素材，創作出各種的封面。</div>
+        </div>
+        <div class="boxB2" id="C2">
+            <div class="typeD"><div class="img"><img src="img/ABC01.jpg"/></div></div>
+            <div class="typeD Noshow550"><div class="img"><img src="img/ABC02.jpg"/></div></div>
+            <div class="typeD"><div class="img"><img src="img/ABC03.jpg"/></div></div>
+            <div class="typeD"><div class="img"><img src="img/ABC04.jpg"/></div></div>
+            <div class="typeD Noshow550"><div class="img"><img src="img/ABC05.jpg"/></div></div>
+            <div class="typeD"><div class="img"><img src="img/ABC06.jpg"/></div></div>
+            <div class="typeD Noshow550"><div class="img"><img src="img/ABC07.jpg"/></div></div>
+            <div class="typeD"><div class="img"><img src="img/ABC08.jpg"/></div></div>
+            <div class="typeD"><div class="img"><img src="img/ABC09.jpg"/></div></div>
+            <div class="textA">英文小書封面設計。<br/>選用適合的英文字體或是手繪創作字體，每一期針對內容和插畫風格去做英文標題字的設計。</div>
+        </div>
+    </section>
+    <section class="boxC" id="D">
+        <h2>Layout<br/>Design</h2>
+        <div class="typeE"><div class="img"><img src="img/LayoutA01.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutA02.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutA03.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutA04.jpg"/></div></div>
+        <div class="textB">幼兒雜誌內頁編排。特殊的標題設計、複雜且多變的內文結構再加上插畫和圖像的混合應用，要保持可讀性和資訊的層次是非常考驗設計技術和經驗的版面設計！</div>
+    </section>
+    <section class="boxC" id="E">
+        <div class="typeE"><div class="img"><img src="img/LayoutB01.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutB02.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutB03.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutB04.jpg"/></div></div>
+        <div class="textB">《小行星幼兒誌》所附的親子手冊。建構於固定的版式設計，需掌握雜誌的既有調性，在每一個翻頁動作之間，恰當的處理各個跨頁的視覺動線。</div>
+    </section>
+    <section class="boxC" id="F">
+        <div class="typeE"><div class="img"><img src="img/LayoutC01.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutC02.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutC03.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutC04.jpg"/></div></div>
+        <div class="textB">知識讀本內頁編排。沒有無意義的背景或配色，貼合各樣的知識性主題，需處理編修照片、畫跨頁背景、繪製說明圖以及裝飾插畫等，完成版面構圖。</div>
+    </section>
+    <section class="boxC" id="G">
+        <div class="typeE"><div class="img"><img src="img/LayoutD01.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutD02.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutD03.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutD04.jpg"/></div></div>
+        <div class="textB">書籍版型設計。包含章名頁、頁眉、標題、內文行氣與風格、特殊區塊等細節處理，講究對字體的掌握度和運用。</div>
+    </section>
+    <section class="boxC" id="H">
+        <div class="typeE"><div class="img"><img src="img/LayoutE01.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutE02.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutE03.jpg"/></div></div>
+        <div class="typeE"><div class="img"><img src="img/LayoutE04.jpg"/></div></div>
+        <div class="textB">這些年來從《誠品好讀》、《親子天下》到《成大校友專刊》，雜誌美術編輯是我入行的起點，一路累積對傳遞資訊的各種力度掌握。</div>
+    </section>
+    <section class="boxD" id="I">
+        <div class="typeF Noshow550"><div class="img"><img src="img/LayoutF01.jpg"/></div></div>
+        <div class="typeF show550"><div class="img"><img src="img/LayoutF02.jpg"/></div></div>
+        <div class="textA">遊戲卡。利用既有的角色ip素材和圖庫資源，配合不同題目完成各樣的版面繪製，融合排版、繪圖和素材應用。</div>
+    </section>
+    <section class="boxA" id="J">
+        <h2>Advertising<br/>Design</h2>
+        <div class="typeA">
+            <div class="img"><img src="img/Ad01.jpg"/></div>
+            <div class="textA">平面廣告。包含海報、雜誌內頁和banner設計，產業面向包含工業產品、藝術展覽和出版品。</div>
+         </div>
+         <div class="typeB">
+            <div class="typeBkids">
+                <div class="typeB1"><div class="img"><img src="img/Ad02.jpg"/></div></div>
+                <div class="typeB2"><div class="img"><img src="img/Ad03.jpg"/></div></div>
+                <div class="typeB3"><div class="img"><img src="img/Ad04.jpg"/></div></div>
+            </div>
+        </div>
+    </section>
+    <section id="K">
+        <div class="boxE">
+        <div class="boxEkids">
+            <div class="typeG"><div class="img"><img src="img/AdB01.jpg"/></div></div>
+            <div class="typeG"><div class="img"><img src="img/AdB02.jpg"/></div></div>
+        </div>
+    </div>
+        <div class="textA">產品摺頁是深入了解客戶的業務與產品後，共同討論出圖文整合的資訊呈現方式，力求貼近客戶產品需要。</div>
+    </section>
+    <section id="L">
+        <div class="boxE">
+        <div class="boxEkids">
+            <div class="typeG"><div class="img"><img src="img/AdC01.jpg"/></div></div>
+            <div class="typeG"><div class="img"><img src="img/AdC02.jpg"/></div></div>
+        </div>
+        </div>
+        <div class="textA">手冊設計。利用挖洞結合內頁設計，使手冊增添實體把玩趣味。</div>
+    </section>
+    </div>
+    <footer>
+        <p>2023.06 更新｜設計・製作：曾偉婷</p>
+    </footer>
+
+    <script>
+        
+    //    $(window).scroll(function(){
+        // $('#B:target,#C1:target,#C2:target,#D:target,#E:target,#F:target,#G:target,#H:target,#I:target,#J:target,#K:target,#L:target').animate({paddingTop: '0px'});
+        // $('body').css('background-color','#000');
+        // });
+    </script>
+   
+</body>
+
+</html>
